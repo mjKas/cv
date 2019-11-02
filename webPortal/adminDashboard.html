@@ -247,11 +247,15 @@
 <!-- Demo scripts for this page-->
 <script src="js/demo/datatables-demo.js"></script>
 <script src="js/demo/chart-area-demo.js"></script>
+
+<!-- Config JavaScript-->
+<script src="./config.js"></script>
+
 <script>
     let universityInfo = '';
     $.ajax({
         type: 'GET',
-        url: 'http://35.200.177.16:8000/api/auth/university',
+        url: BASE_URL + 'api/auth/university',
         cache: false,
         complete: function (data, status) {
             if (status === "success") {

@@ -1,6 +1,6 @@
 require('dotenv').config();
-const imageThumbnail = require('image-thumbnail');
-const {imageHash} = require('image-hash');
+//const imageThumbnail = require('image-thumbnail');
+//const {imageHash} = require('image-hash');
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const database = require("../utils");
@@ -58,7 +58,7 @@ exports.register = async (req, res, next) => {
                         "values " + "('" + email + "','" + hash + "','active','" + userType + "','" + null + "','" + createdAt + "')";
                     database.executeQuery(res, "User Successfully Created", query);
 
-                    readHTMLFile('/home/manuja/CertificateVerification/backend/email/registerUser.html', function (err, html) {
+                    readHTMLFile('/home/inshar/CertificateVerification/backend/email/registerUser.html', function (err, html) {
                         let template = handlebars.compile(html);
                         let replacements = {
                             email: email,
@@ -208,7 +208,7 @@ exports.resetRequest = async (req, res, next) => {
                                     res.status(500).json(response);
                                 } else {
 
-                                    readHTMLFile('/home/manuja/CertificateVerification/backend/email/passwordReset.html', function (err, html) {
+                                    readHTMLFile('/home/inshar/CertificateVerification/backend/email/passwordReset.html', function (err, html) {
                                         let template = handlebars.compile(html);
                                         let replacements = {
                                             url: url
@@ -434,7 +434,7 @@ function hashFile(query, certificate, firstName, universityName, replacements, e
 
                         database.executeQuery(res, "Student Created Successfully", queryInsert);
 
-                        readHTMLFile('/home/manuja/CertificateVerification/backend/email/certificateEmail.html', function (err, html) {
+                        readHTMLFile('/home/inshar/CertificateVerification/backend/email/certificateEmail.html', function (err, html) {
                             let template = handlebars.compile(html);
 
                             Object.assign(replacements, {hash: dataHash});

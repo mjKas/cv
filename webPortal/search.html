@@ -61,6 +61,10 @@
 
 <!-- Demo scripts for this page-->
 <script src="js/demo/datatables-demo.js"></script>
+
+<!-- Config JavaScript-->
+<script src="./config.js"></script>
+
 <script>
 
     $("form.Form").on("submit", function (e) {
@@ -71,7 +75,7 @@
 
         $.ajax({
             type: 'GET',
-            url: 'http://35.200.177.16:8000/api/auth/verify?hash=' + hash + '',
+            url: BASE_URL + 'api/auth/verify?hash=' + hash + '',
             cache: false,
             complete: function (data, status) {
                 console.log(data);

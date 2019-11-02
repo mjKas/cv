@@ -6985,7 +6985,7 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-  /* manuja */
+  /* inshar */
   background-color: #010103 !important;
 }
 
@@ -8570,7 +8570,7 @@ button.bg-dark:focus {
 .mr-5,
 .mx-5 {
   margin-right: 3rem !important;
-  /*manuja*/
+  /*inshar*/
   color: #0B0C21;
   font-weight: 500;
 }
@@ -10917,7 +10917,7 @@ body.sidebar-toggled footer.sticky-footer {
   }
 }
 
-/*manuja*/
+/*inshar*/
 .pgBackground {
   background-color: #0B0C21 !important;
 }

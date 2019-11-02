@@ -55,6 +55,10 @@
 
 <!-- Core plugin JavaScript-->
 <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Config JavaScript-->
+<script src="./config.js"></script>
+
 <script>
     $("form.Form").on('submit', function (e) {
         e.preventDefault();
@@ -63,7 +67,7 @@
 
         $.ajax({
             type: "POST",
-            url: "http://35.200.177.16:8000/api/auth/register",
+            url: BASE_URL + "api/auth/register",
             data: {
                 email: inputEmailValue,
                 password: inputPasswordValue,
