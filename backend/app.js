@@ -7,7 +7,7 @@ const authRoutes = require("./routes/auth");
 
 const app = express();
 app.use("/certificates", express.static(path.join(__dirname, 'public/certificates')));
-app.use("/", express.static(path.join('/home/inshar/CertificateVerification/webPortal')));
+app.use("/", express.static(path.join('/home/inshar/cv/webPortal')));
 
 // Body Parser Middleware
 app.use(bodyParser.json({limit:'100mb'}));
@@ -16,7 +16,7 @@ app.use(cors());
 
 app.use('/api/auth' , authRoutes);
 app.get('/',function(req,res){
-    res.sendFile(path.join("/home/inshar/CertificateVerification/webPortal/login.html"));
+    res.sendFile(path.join("/home/inshar/cv/webPortal/login.html"));
 });
 
 module.exports = app;
